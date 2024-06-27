@@ -23,10 +23,10 @@ public class Comtrollerclass {
 	@Autowired
 	getData get;
 	@PostMapping("/book")
-	public ResponseEntity<String> Book(@RequestBody Coustmerpojo pojo){
+	public ResponseEntity<Integer> Book(@RequestBody Coustmerpojo pojo){
 		
 		Integer id=ins.insertdetails(pojo);
-		return   new ResponseEntity<String>( "your booking is done with id :"+id,HttpStatus.OK);
+		return   new ResponseEntity<Integer>(id,HttpStatus.OK);
 	}
 	
 	@GetMapping("/getdata/{id}")

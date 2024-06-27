@@ -29,7 +29,7 @@ public class mainController {
 		return new ResponseEntity<coustmerpojo>(pojo,HttpStatus.OK);
 	}
 	
-	@PutMapping("update/{id}/{destination}")
+	@PostMapping("update/{id}/{destination}")
 	public ResponseEntity<coustmerpojo> update( @PathVariable("id") Integer id, @PathVariable("destination") String destination){
 	coustmerpojo res=impl.updatedestination(id, destination);
 		return new ResponseEntity<coustmerpojo>(res,HttpStatus.OK);
