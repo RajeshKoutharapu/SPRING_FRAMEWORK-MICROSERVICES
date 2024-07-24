@@ -20,7 +20,7 @@ public class Controller {
 	@Autowired
 	implementation impl;
 	@PostMapping("/register")
-	public ResponseEntity<laptop> setdetails(@RequestBody laptop lap) {
+	public ResponseEntity<laptop> setdetails(@RequestBody laptop lap) throws Exception {
 		 laptop lap1 = impl.register(lap);
 		    return new ResponseEntity<laptop>(lap1,HttpStatus.CREATED);
 	}

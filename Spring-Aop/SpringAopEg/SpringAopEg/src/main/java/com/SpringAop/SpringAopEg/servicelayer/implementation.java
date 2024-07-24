@@ -12,7 +12,10 @@ import com.SpringAop.SpringAopEg.model.laptop;
 public class implementation {
 	@Autowired
 	Dboperations dbop;
-       public laptop register(laptop lap) {
+       public laptop register(laptop lap) throws Exception {
+    	   
+    	   if(!lap.getBrand().equals("HP"))
+    		    throw new Exception("I CORRECT BRAND IT NOT GOOD ONE");
     	   return dbop.savedat(lap);
        }
        public List<laptop> fetchdata(){
