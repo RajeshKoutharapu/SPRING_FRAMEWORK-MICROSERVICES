@@ -22,7 +22,7 @@ public class implaop {
 		   System.out.println("Response passed to controller layer ---------"+join.getSignature()+LocalTime.now());
 	  }
 	@AfterThrowing(value="execution(* com.SpringAop.SpringAopEg.servicelayer.*.*(..))",throwing = "exception")
-	public void brandcheck(JoinPoint join,Exception e) {
+	public void beforerunning(JoinPoint join,Exception e) {
 		System.out.println("ERROR OCCURED WHILE REGISTERING"+join.getSignature()+"  "+e.getMessage());
 	}
 //	@Around(value = "execution(* com.SpringAop.SpringAopEg.servicelayer.*.*(..))")
