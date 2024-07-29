@@ -9,7 +9,7 @@ public class Dboperations {
           repointerface repo;
           
     public user findbyname(String username) {
-    	
+
     	return repo.findByName(username);
     }
 }
